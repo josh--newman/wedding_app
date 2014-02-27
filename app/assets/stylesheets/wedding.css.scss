@@ -85,6 +85,17 @@ article.save-the-date {
   
 }
 
+/* maps */
+
+.map {
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+
 /* MEDIA QUERIES */
 
 /* mobile styles */
@@ -123,6 +134,17 @@ article.save-the-date {
     }
 
 
+  }
+  
+  .map h1 {
+    float: left;
+  }
+
+  .map iframe {
+    /*position: absolute;*/
+    float: right;
+    width: 50% !important;
+    height: 50% !important;
   }
 
 } /* END OF STYLESHEET */
