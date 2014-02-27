@@ -1,0 +1,128 @@
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(http://fonts.googleapis.com/css?family=Cardo);
+
+$defaultFont: 'Cardo';
+
+$weddingBrown: #996633;
+
+/*limited reset*/
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+}
+
+/*html5 display rule*/
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+  display: block;
+  float: none;
+}
+
+/* border-box reset */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a img {
+  border: none;
+  outline: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url('gold-glitter.png');
+  background-repeat: repeat-x;
+}
+
+body {
+  font: 100% $defaultFont, sans-serif;
+  font-weight: 200;
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  line-height: 1.5em;
+  color: $weddingBrown;
+  border: 1px solid black;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+/* USER */
+
+article.save-the-date {
+  h1 {
+    line-height: 1em;
+  }
+  .fancy {
+    font-family: 'Great Vibes', arial;
+    text-transform: none;
+  }
+  p {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+}
+
+/* MEDIA QUERIES */
+
+/* mobile styles */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* tablet styles */
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+
+}
+
+/* desktop styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    width: 80%;
+    max-width: 1024px;
+  }
+
+  h1 {
+    font-size: 4em;
+    margin-top: 1em;
+  }
+
+  article.save-the-date {
+    p {
+      font-size: 1.5em;
+      &:first-of-type {
+        margin-top: 1.5em;  
+      }
+      &:last-of-type {
+        margin-top: 1.5em;
+        font-size: 2em;
+      }
+      
+    }
+
+
+  }
+
+} /* END OF STYLESHEET */
