@@ -1,2 +1,2 @@
-alert("Your invite code is: <%= @invite.code %>");
+$("<%= escape_javascript(render @invite) %>").appendTo("body");
 
