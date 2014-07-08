@@ -1,5 +1,9 @@
 $("#invite").empty();
-$("<%= escape_javascript(render 'form') %>").appendTo("#invite");
+$("#status").empty();
+
+var guests = $("<%= escape_javascript(render 'form') %>");
+guests.toggleClass("hide").appendTo("#invite");
+guests.slideDown("fast");
 
 $("*[id*=has_dietary]").each(function() {
   var text_area_index = $(this).attr("id").substr(0,1);
