@@ -1,3 +1,16 @@
 $("#invite").empty();
 $("<%= escape_javascript(render 'form') %>").appendTo("#invite");
 
+$("*[id*=has_dietary]").each(function() {
+  var text_area_index = $(this).attr("id").substr(0,1);
+  $(this).on("change", function() {
+    var text_area = $("#dietary_box_"+text_area_index)
+    if (this.checked) {
+      text_area.slideDown("fast");
+    }
+    else {
+      text_area.slideUp("fast");
+    }
+  });
+});
+

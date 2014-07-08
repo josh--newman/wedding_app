@@ -30,9 +30,9 @@
 // $include-print-styles: true;
 // $include-html-global-classes: $include-html-classes;
 
-// Grid 
+// Grid
 
-// $include-html-block-grid-classes: $include-html-classes; 
+// $include-html-block-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
 // $row-width: rem-calc(1000);
@@ -40,14 +40,24 @@
 
 // Global
 
+
+/* FONTS AND COLOURS */
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(http://fonts.googleapis.com/css?family=Cardo);
+
+$weddingBrown: #996633;
+$darkBrown: #4A2602;
+$straw: #D7C284;
+$default-font-family: "Great Vibes", "Cardo", "Helvetica", Helvetica, Arial, sans-serif;
+
 // We use these to define default font weights
 // $font-weight-normal: normal !default
-// $font-weight-bold: bold !default
+$font-weight-bold: bold !default;
 
 // We use these to control various global styles
-// $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-bg: image-url('gold-glitter.png') repeat-x;
+$body-font-color: $weddingBrown;
+$body-font-family: "Cardo", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -68,7 +78,7 @@
 // $info-color: #a0d3e8;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
+$global-radius: 3px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -79,8 +89,8 @@
 // $column-gutter: rem-calc(30);
 
 // Media Query Ranges
-// $small-range: (0em, 40em);
-// $medium-range: (40.063em, 64em);
+$small-range: (0em, 38em);
+$medium-range: (38.063em, 64em);
 // $large-range: (64.063em, 90em);
 // $xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em, 99999999em);
@@ -127,14 +137,14 @@
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: $weddingBrown;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
+$h1-font-size: rem-calc(55);
 // $h2-font-size: rem-calc(37);
 // $h3-font-size: rem-calc(27);
 // $h4-font-size: rem-calc(23);
@@ -152,6 +162,7 @@
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
 // $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
+$subheader-font-color: $weddingBrown;
 // $subheader-font-weight: $font-weight-normal;
 // $subheader-top-margin: .2rem;
 // $subheader-bottom-margin: .5rem;
@@ -179,14 +190,14 @@
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: $straw;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: #ddd;
-// $hr-margin: rem-calc(20);
+$hr-border-color: scale-color($weddingBrown, $lightness: 30%);
+$hr-margin: rem-calc(5);
 
 // We use these to style lists
 // $list-font-family: $paragraph-font-family;
@@ -353,7 +364,7 @@
 // $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-// $button-font-family: $body-font-family;
+$button-font-family: $default-font-family;
 // $button-font-color: #fff;
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);
@@ -369,11 +380,11 @@
 // We use these to control button border styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg: $primary-color;
+$button-bg: scale-color($straw, $lightness: -20%);
 // $button-border-color: scale-color($bg, $lightness: $button-function-factor);
 
 // We use this to set the default radius used throughout the core.
-// $button-radius: $global-radius;
+$button-radius: 5px;
 // $button-round: $global-rounded;
 
 // We use this to set default opacity for disabled buttons.
@@ -520,24 +531,28 @@
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
-// $form-label-font-size: rem-calc(14);
-// $form-label-font-weight: $font-weight-normal;
+$form-label-font-size: rem-calc(30);
+$form-label-font-weight: $font-weight-bold;
 // $form-label-line-height: 1.5;
 // $form-label-font-color: scale-color(#000, $lightness: 30%);
+$form-label-font-color: $weddingBrown;
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
-// $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
+$input-font-color: $weddingBrown;
+$input-font-size: rem-calc(20);
 // $input-bg-color: #fff;
 // $input-focus-bg-color: scale-color(#fff, $lightness: -2%);
-// $input-border-color: scale-color(#fff, $lightness: -20%);
+$input-border-color: scale-color($straw, $lightness: 60%);
+// $input-border-color: $straw;
 // $input-focus-border-color: scale-color(#fff, $lightness: -40%);
+$input-focus-border-color: $straw;
 // $input-border-style: solid;
-// $input-border-width: 1px;
-// $input-border-radius: $global-radius;
+$input-border-width: 3px;
+$input-border-radius: $global-radius;
 // $input-disabled-bg: #ddd;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$input-box-shadow: none;
 // $input-include-glowing-effect: true;
 
 // We use these to style the fieldset border and spacing.
@@ -1178,6 +1193,20 @@
 // $tooltip-rounded: $global-rounded;
 // $tooltip-pip-size: 5px;
 // $tooltip-max-width: 300px;
+
+//
+// ICON BAR
+//
+
+$icon-bar-bg: none;
+$icon-bar-font-color: $weddingBrown;
+$icon-bar-hover-color: none;
+// $icon-bar-icon-color: #fff
+// $icon-bar-icon-size: 1.875rem
+// $icon-bar-image-width: 1.875rem
+// $icon-bar-image-height: 1.875rem
+// $icon-bar-active-color: $primary-color
+// $icon-bar-item-padding: 1.25rem
 
 //
 // TOP BAR

@@ -4,8 +4,65 @@
 
 // $defaultFont: 'Cardo';
 
-// $weddingBrown: #996633;
-// $straw: #D7C284;
+$weddingBrown: #996633;
+$darkBrown: #4A2602;
+$straw: #D7C284;
+
+$default-font-family: "Great Vibes", "Cardo", "Helvetica", Helvetica, Arial, sans-serif;
+
+.fancy {
+  font-family: $default-font-family;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.dietary {
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+// Row override
+.row {
+  margin-bottom: 20px !important;
+}
+
+// Icon-Bar overrides
+div.icon-bar {
+  background: none;
+  label {
+    font-size: 2rem;
+    font-family: $default-font-family;
+    &:hover {
+      color: $straw;
+    }
+  }
+}
+
+// RSVP input
+input[type="text"].rsvp_input {
+  height: 4rem;
+  border-radius: 5px;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+// Switches
+div.switch input:checked + label{
+  background: scale-color($straw, $lightness: -20%);
+}
+
+// Buttons
+.button {
+  font-size: 3rem;
+  border-radius: 5px;
+}
+
+
 
 // /*limited reset*/
 // html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {

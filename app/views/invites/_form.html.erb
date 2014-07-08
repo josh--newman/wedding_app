@@ -1,15 +1,46 @@
 <%= form_for @invite, remote: true do |f| %>
   <%#= f.error_messages %>
+  <div class="row">
+    <h3 class="subheader text-center">Please indicate all who are attending</h3>
+  </div>
   <%= f.fields_for :guests do |guest_fields| %>
     <% guest_fields.hidden_field :name, value: guest_fields.object.name %>
     <% guest_fields.hidden_field :invite_id, value: guest_fields.object.invite_id %>
-    <div class="switch switch-square">
-    <%= guest_fields.check_box :is_coming, data: {toggle: "switch"} %>
+
+    <div class="row">
+      <div class="small-6 medium-2 medium-offset-2 columns">
+        <label><%= guest_fields.object.name %></label>
+      </div>
+      <div class="small-6 medium-2 columns">
+        <div class="switch radius large">
+          <%= guest_fields.check_box :is_coming %>
+          <%= guest_fields.label :is_coming %>
+        </div>
+      </div>
+
+      <div class="small-6 medium-3 columns">
+        <label class="dietary">Special dietary requirements?</label>
+      </div>
+      <div class="small-6 medium-3 columns end">
+        <div class="switch radius large">
+          <%= check_box_tag "#{guest_fields.index}_has_dietary", onchange: "showDietaryBox();" %>
+          <%= label_tag "#{guest_fields.index}_has_dietary" %>
+        </div>
+      </div>
     </div>
-    <%= guest_fields.object.name %>
-    <p>
-    <%= guest_fields.text_area :dietary, rows: 3 %>
-    </p>
+
+    <div class="row">
+      <div id="<%= "dietary_box_#{guest_fields.index}" %>" class="small-12 medium-9 small-centered columns hide">
+        <label class="dietary">Please specify</label>
+        <%= guest_fields.text_area :dietary, rows: 3 %>
+      </div>
+    </div>
+
   <% end %>
-  <p><%= f.submit "Submit" %></p>
+
+  <div class="row">
+    <div class="small-8 medium-4 small-centered columns">
+      <%= f.submit "Save", class: "button expand" %>
+    </div>
+  </div>
 <% end %>
