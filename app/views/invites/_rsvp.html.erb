@@ -1,0 +1,3 @@
+<%= form_tag url_for(controller: 'invites', action: 'rsvp'), method: 'get', remote: true do %>
+<%= text_field_tag 'code', nil, placeholder: 'Enter RSVP code', class: 'form-control' %>
+<% end %>

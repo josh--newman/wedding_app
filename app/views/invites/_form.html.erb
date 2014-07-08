@@ -1,0 +1,15 @@
+<%= form_for @invite, remote: true do |f| %>
+  <%#= f.error_messages %>
+  <%= f.fields_for :guests do |guest_fields| %>
+    <% guest_fields.hidden_field :name, value: guest_fields.object.name %>
+    <% guest_fields.hidden_field :invite_id, value: guest_fields.object.invite_id %>
+    <div class="switch switch-square">
+    <%= guest_fields.check_box :is_coming, data: {toggle: "switch"} %>
+    </div>
+    <%= guest_fields.object.name %>
+    <p>
+    <%= guest_fields.text_area :dietary, rows: 3 %>
+    </p>
+  <% end %>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

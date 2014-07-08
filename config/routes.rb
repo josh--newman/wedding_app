@@ -1,15 +1,10 @@
 WeddingApp::Application.routes.draw do
-  get "invites/new"
-  get "invites/edit"
-  get "invites/update"
-  get "invites/delete"
-  get "guests/new"
-  get "guests/edit"
-  get "guests/update"
-  get "guests/delete"
+  resources :guests
+  resources :invites
   root 'static_pages#home'
 
-  match '/rsvp', to: 'invites#rsvp',  via: 'get'
+  match '/rsvp',         to: 'invites#rsvp', via: 'get'
+  match '/guest_update', to: 'guests#edit',  via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

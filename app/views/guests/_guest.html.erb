@@ -1,1 +1,7 @@
-<li><%= guest.name %></li>
+<div>
+  <%= form_tag url_for(controller: 'guests', action: 'edit'), method: 'get', remote: true do %>
+  <%= check_box_tag :is_coming %>
+  <%= label_tag guest.name %>
+  <%#= guest.name %>
+  <% end %>
+</div>

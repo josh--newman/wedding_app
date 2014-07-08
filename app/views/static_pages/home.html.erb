@@ -8,7 +8,5 @@
 <p class="construction">This site is under construction</p><br>
 <p>In the mean time, why not look at some accommodation? The date is in the school holidays so places are booking fast. Casuarina itself has some accomodation and Kingscliffe is approximately a 5 minute drive. Coolangatta is approximately a 20 minute drive. Some have already booked at <a href="http://cottonbeachresort.com.au/" target="_blank">Cotton Beach Resort</a>. You can also find accomodation by searching on <a href="http://www.stayz.com.au/" target="_blank">Stayz</a></p>
 
-
-<%= form_tag url_for(controller: 'invites', action: 'rsvp'), method: 'get', remote: true %>
-<%= text_field_tag 'code', nil, placeholder: 'Enter RSVP code', class: 'form-control' %>
-<%= button_tag 'Submit', class: 'btn btn-primary' %>
+<%= render 'invites/rsvp' %>
+<div id="invite"></div>

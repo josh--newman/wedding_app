@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Coming?</th>
+    <th>Dietary</th>
+    <th>Invite Code</th>
+  </thead>
+  <tbody>
+    <% @guests.each do |guest| %>
+      <tr>
+        <td><%= guest.name %></td>
+        <td><%= guest.is_coming %></td>
+        <td><%= guest.dietary %></td>
+        <td><%= guest.invite.code %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
