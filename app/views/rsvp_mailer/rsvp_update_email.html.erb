@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Invite: <%= @invite.code %></h1>
+  <p>An update for invite <%= @invite.code %> has been made.</p>
+  <p>See the below table for details.</p>
+
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Coming?</th>
+      <th>Dietary?</th>
+      <th>Dietary details</th>
+    </thead>
+    <tbody>
+      <% @invite.guests.each do |guest| %>
+      <tr>
+        <td><%= guest.name %></td>
+        <td><%= guest.is_coming %></td>
+        <td><%= guest.has_dietary %></td>
+        <td><%= guest.dietary %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</body>
+</html>

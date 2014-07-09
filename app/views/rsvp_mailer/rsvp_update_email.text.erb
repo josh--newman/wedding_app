@@ -1,0 +1,13 @@
+Invite: <%= @invite.code %>
+==========================
+An update for invite <%= @invite.code %> has been made.
+See the below list for details.
+
+<% @invite.guests.each do |guest| %>
+
+Name:            <%= guest.name %>
+Coming?:         <%= guest.is_coming %>
+Dietary?:        <%= guest.has_dietary %>
+Dietary details: <%= guest.dietary %>
+
+<% end %>
