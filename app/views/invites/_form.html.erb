@@ -23,14 +23,14 @@
       </div>
       <div class="small-6 medium-3 columns end">
         <div class="switch radius large">
-          <%= check_box_tag "#{guest_fields.index}_has_dietary", onchange: "showDietaryBox();" %>
-          <%= label_tag "#{guest_fields.index}_has_dietary" %>
+          <%= guest_fields.check_box :has_dietary %>
+          <%= guest_fields.label :has_dietary %>
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div id="<%= "dietary_box_#{guest_fields.index}" %>" class="small-12 medium-9 small-centered columns hide">
+      <div id="<%= "#{guest_fields.index}_has_dietary" %>" class="small-12 medium-9 small-centered columns hide">
         <label class="dietary">Please specify</label>
         <%= guest_fields.text_area :dietary, rows: 3 %>
       </div>

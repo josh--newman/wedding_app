@@ -6,15 +6,22 @@ guests.toggleClass("hide").appendTo("#invite");
 guests.slideDown("fast");
 
 $("*[id*=has_dietary]").each(function() {
-  var text_area_index = $(this).attr("id").substr(0,1);
+  var text_area_index = $(this).attr("id").substr(25);
+  var text_area = $("#"+text_area_index)
+
+  if (this.checked && $(text_area).hasClass("hide")) {
+    text_area.show();
+  }
+
   $(this).on("change", function() {
-    var text_area = $("#dietary_box_"+text_area_index)
     if (this.checked) {
       text_area.slideDown("fast");
     }
     else {
       text_area.slideUp("fast");
+      text_area.find("textarea").val("");
     }
   });
 });
 
+// invite_guests_attributes_0_has_dietary

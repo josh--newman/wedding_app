@@ -46,7 +46,7 @@ class InvitesController < ApplicationController
     end
 
     def invite_params
-      params.require(:invite).permit(guests_attributes: [ :id, :is_coming, :dietary ])
+      params.require(:invite).permit(guests_attributes: [ :id, :is_coming, :has_dietary, :dietary ])
     end
 
 
