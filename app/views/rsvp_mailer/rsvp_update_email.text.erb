@@ -6,8 +6,8 @@ See the below list for details.
 <% @invite.guests.each do |guest| %>
 
 Name:            <%= guest.name %>
-Coming?:         <%= guest.is_coming %>
-Dietary?:        <%= guest.has_dietary %>
+Coming?:         <%= guest.is_coming ? "yes" : "no" %>
+Dietary?:        <%= guest.has_dietary ? "yes" : "no" %>
 Dietary details: <%= guest.dietary %>
 
 <% end %>

@@ -19,8 +19,8 @@
       <% @invite.guests.each do |guest| %>
       <tr>
         <td><%= guest.name %></td>
-        <td><%= guest.is_coming %></td>
-        <td><%= guest.has_dietary %></td>
+        <td><%= guest.is_coming ? "yes" : "no" %></td>
+        <td><%= guest.has_dietary ? "yes" : "no" %></td>
         <td><%= guest.dietary %></td>
       </tr>
       <% end %>

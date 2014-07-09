@@ -11,11 +11,11 @@ class InvitesController < ApplicationController
 
     respond_to do |format|
       if @invite.update_attributes(invite_params)
-        # Send an email to notify admins that an invite has been updated
-        RSVPMailer.rsvp_update_email(@invite)
-
         format.html { redirect_to root_path, notice: "RSVP'd successfully" }
         format.js   {}
+
+        # Send an email to notify admins that an invite has been updated
+        RsvpMailer.rsvp_update_email(@invite).deliver
       else
         format.html { redirect_to root_path, notice: "Something went wrong!" }
         format.js { render "update_error.js.erb" }

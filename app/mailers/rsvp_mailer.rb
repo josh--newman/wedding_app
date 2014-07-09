@@ -1,6 +1,6 @@
 class RsvpMailer < ActionMailer::Base
-  default to:   "josh.newman4390@gmail.com"
-          from: "josh.newman4390@gmail.com"
+  default to:   "josh.newman4390@gmail.com, caitlanjean@hotmail.com",
+          from: "notifications@caitlanandjosh.com"
 
   def rsvp_update_email(invite)
     @invite = invite
