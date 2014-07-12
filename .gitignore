@@ -17,3 +17,6 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore sample_data
+/lib/tasks/sample_data.rake
