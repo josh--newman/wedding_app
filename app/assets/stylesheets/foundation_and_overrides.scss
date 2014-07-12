@@ -174,9 +174,9 @@ $subheader-font-color: $weddingBrown;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
-// $paragraph-line-height: 1.6;
-// $paragraph-margin-bottom: rem-calc(20);
+$paragraph-font-size: 1.3rem;
+$paragraph-line-height: 1.2;
+$paragraph-margin-bottom: rem-calc(10);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
@@ -1156,11 +1156,11 @@ $input-box-shadow: none;
 // $include-html-media-classes: $include-html-classes;
 
 // We use these to control border styles
-// $thumb-border-style: solid;
-// $thumb-border-width: 4px;
-// $thumb-border-color: #fff;
-// $thumb-box-shadow: 0 0 0 1px rgba(#000,.2);
-// $thumb-box-shadow-hover: 0 0 6px 1px rgba($primary-color,0.5);
+$thumb-border-style: solid;
+$thumb-border-width: 3px;
+$thumb-border-color: $straw;
+$thumb-box-shadow: 0 0 0 1px rgba(#000,.2);
+$thumb-box-shadow-hover: 0 0 6px 1px rgba($straw,0.5);
 
 // Radius and transition speed for thumbs
 // $thumb-radius: $global-radius;
