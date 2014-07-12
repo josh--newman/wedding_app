@@ -1,0 +1,28 @@
+  <% @invites.each do |invite| %>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="4"><%= invite.code %></th>
+      </tr>
+      <tr>
+        <th colspan="4"><%= "Updated: #{distance_of_time_in_words_to_now(invite.updated_at)} ago" %></th>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <th>Coming</th>
+        <th>Has dietary</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% invite.guests.each do |guest| %>
+      <tr>
+        <td><%= guest.name %></td>
+        <td><%= guest.is_coming ? "yes" : "no" %></td>
+        <td><%= guest.has_dietary ? "yes" : "no" %></td>
+        <td><%= guest.dietary %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>

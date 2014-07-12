@@ -1,7 +1,8 @@
 class InvitesController < ApplicationController
   before_action :set_invite, only: [:new, :edit, :update]
 
-  def new
+  def index
+    @invites = Invite.all
   end
 
   def edit
