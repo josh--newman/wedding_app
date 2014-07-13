@@ -11,7 +11,7 @@
       <div class="small-6 medium-2 medium-offset-2 columns">
         <label><%= guest_fields.object.name %></label>
       </div>
-      <div class="small-6 medium-2 columns">
+      <div class="small-5 small-offset-1 medium-2 medium-offset-0 columns">
         <div class="switch radius large">
           <%= guest_fields.check_box :is_coming %>
           <%= guest_fields.label :is_coming %>
@@ -21,7 +21,7 @@
       <div class="small-6 medium-3 columns">
         <label class="dietary">Special dietary requirements?</label>
       </div>
-      <div class="small-6 medium-3 columns end">
+      <div class="small-5 small-offset-1 medium-3 medium-offset-0 columns end">
         <div class="switch radius large">
           <%= guest_fields.check_box :has_dietary %>
           <%= guest_fields.label :has_dietary %>
@@ -39,7 +39,7 @@
   <% end %>
 
   <div class="row">
-    <div class="small-8 medium-4 small-centered columns">
+    <div class="small-10 medium-4 small-centered columns">
       <%= f.submit "Save", class: "button expand" %>
     </div>
   </div>
