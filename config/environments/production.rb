@@ -93,6 +93,4 @@ WeddingApp::Application.configure do
     Delayed::Job.scaler = :heroku_cedar
   end
 
-  end
-
 end
