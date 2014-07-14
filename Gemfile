@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'rufus-scheduler'
 gem 'foundation-rails'
 gem 'figaro'
+gem 'delayed_job_active_record'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

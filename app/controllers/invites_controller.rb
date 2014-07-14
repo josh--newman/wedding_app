@@ -16,7 +16,7 @@ class InvitesController < ApplicationController
         format.js   {}
 
         # Send an email to notify admins that an invite has been updated
-        # RsvpMailer.rsvp_update_email(@invite).deliver
+        RsvpMailer.delay.rsvp_update_email(@invite)
       else
         format.html { redirect_to root_path, notice: "Something went wrong!" }
         format.js { render "update_error.js.erb" }
