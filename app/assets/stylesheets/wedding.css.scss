@@ -87,13 +87,19 @@ div.switch input:checked + label{
 }
 
 // Responsive Maps
-.google-maps {
+div.google-maps {
   border: 3px solid scale-color($straw, $lightness: -20%);
   padding: 0px;
 
   iframe {
     width: 100%;
     height: 20rem;
+  }
+}
+
+div.row.clearfix {
+  div.google-maps {
+    margin: 0 1rem;
   }
 }
 
