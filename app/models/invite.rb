@@ -4,4 +4,8 @@ class Invite < ActiveRecord::Base
 
   validates :code, presence: true
   accepts_nested_attributes_for :guests
+
+  def short_code
+    code.sub(/[0-9]+/, '')
+  end
 end
