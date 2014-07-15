@@ -24,9 +24,6 @@ class InvitesController < ApplicationController
     end # respond_to
   end # update
 
-  def delete
-  end
-
   def rsvp
     @invite = Invite.find_by(code: params[:code])
 
