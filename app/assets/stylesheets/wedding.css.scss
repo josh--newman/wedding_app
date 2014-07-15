@@ -44,6 +44,7 @@ textarea {
 
 div#status p {
   font-size: 1.5em;
+  margin-bottom: 3rem;
 }
 
 article.wedding-section {
@@ -53,6 +54,10 @@ article.wedding-section {
 ul.small-block-grid-2 img {
   margin-bottom: 10px;
   border: 3px solid scale-color($straw, $lightness: -20%);
+}
+
+.word-wrap {
+  overflow-wrap: break-word;
 }
 
 div#footer {
