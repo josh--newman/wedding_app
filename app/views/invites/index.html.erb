@@ -4,7 +4,7 @@
     <p class="text-center">Number of guests attending:
     <%= "#{Guest.num_attending}/#{Guest.all.count}" %></p>
     <p class="text-center">Number of guests with dietary requirements:
-    <%= "#{Guest.num_dietary}/#{Guest.all.count}" %></p>
+    <%= "#{Guest.num_dietary}/#{Guest.num_attending}" %></p>
   </div>
 </div>
 
@@ -17,13 +17,14 @@
             <th>Coming</th>
             <th>Has Dietary</th>
             <th>Details</th>
+            <th>Updated</th>
           </tr>
         </thead>
         <tbody>
           <% @invites.each do |invite| %>
           <thead>
           <tr>
-            <th colspan="4"><%= invite.short_code %></th>
+            <th colspan="5"><%= invite.short_code %></th>
           </tr>
           </thead>
           <% invite.guests.each do |guest| %>
@@ -32,6 +33,7 @@
             <td><%= guest.is_attending %></td>
             <td><%= guest.has_special_diet %></td>
             <td><%= guest.dietary %></td>
+            <td><%= "#{distance_of_time_in_words_to_now(invite.updated_at)} ago" %></td>
           </tr>
           <% end %>
           <% end %>
